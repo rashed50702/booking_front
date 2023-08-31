@@ -26,7 +26,6 @@
               class="text-caption text-decoration-none text-blue"
               href="#"
               rel="noopener noreferrer"
-              target="_blank"
             >
               Forgot login password?</a>
           </div>

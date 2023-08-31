@@ -4,20 +4,20 @@
           <LeftBar :user="user"/>
         </v-col>
         <v-col cols="12" sm="9">
-            <Dashboard :user="user"/>
+            <MyBookings :user="user"/>
         </v-col>
     </v-row>
 </template>
 
 <script>
 import LeftBar from '@/components/LeftBar.vue'
-import Dashboard from '@/components/Dashboard.vue'
+import MyBookings from '@/components/MyBookings.vue'
 import apiMethods from '../apis/apiMethods';
 
 export default {
 
     components: {
-        Dashboard,
+        MyBookings,
         LeftBar,
     },
 

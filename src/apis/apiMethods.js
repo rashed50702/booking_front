@@ -31,4 +31,8 @@ export default{
 		return api.post('/book-now', form);
 	},
 
+	fetchBookingByUserId(userId){
+		return api.get(`/my-bookings/${userId}`);	
+	},
+
 }
