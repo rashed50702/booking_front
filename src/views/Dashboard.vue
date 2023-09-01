@@ -1,38 +1,7 @@
 <template>
-    <v-row no-gutters>
-        <v-col cols="12" sm="3">
-          <LeftBar :user="user"/>
-        </v-col>
-        <v-col cols="12" sm="9">
-            <Dashboard :user="user"/>
-        </v-col>
-    </v-row>
+  <Dashboard />
 </template>
 
-<script>
-import LeftBar from '@/components/LeftBar.vue'
-import Dashboard from '@/components/Dashboard.vue'
-import apiMethods from '../apis/apiMethods';
-
-export default {
-
-    components: {
-        Dashboard,
-        LeftBar,
-    },
-
-    data() {
-        return {
-            user: null,
-        }
-    },
-
-    mounted() {
-        apiMethods.authUser().then(response => {
-            this.user = response.data;
-        });
-
-    },
-}
-
+<script lang="ts" setup>
+  import Dashboard from '@/components/Dashboard.vue'
 </script>

@@ -17,7 +17,8 @@ export default{
 		return api.post('/logout');
 	},
 
-	authUser(){
+	async authUser(){
+		await csrf.getCookie();
 		return api.get('/user');
 	},
 
@@ -31,7 +32,8 @@ export default{
 		return api.post('/book-now', form);
 	},
 
-	fetchBookingByUserId(userId){
+	async fetchBookingByUserId(userId){
+		await csrf.getCookie();
 		return api.get(`/my-bookings/${userId}`);	
 	},
 
